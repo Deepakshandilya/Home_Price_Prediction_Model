@@ -1,0 +1,147 @@
+/* Body and HTML Setup */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    overflow: hidden;
+}
+
+/* Fix Background Animation */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    animation: backgroundAnimation 15s infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); }
+    50% { background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); }
+    100% { background-image: url('https://images.unsplash.com/photo-1600585153706-c1f3f5e9e2dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); }
+}
+
+/* Centering the Main Box */
+.container {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%; /* Make the container responsive */
+    max-width: 400px; /* Limit the width on larger screens */
+    z-index: 1;
+    margin: 0 auto; /* Center it horizontally */
+}
+
+/* Heading Styling */
+.main-heading {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+    color: transparent;
+    background-image: linear-gradient(45deg, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 5px 0;
+}
+
+/* Input and Form Styles */
+.input-field, select {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    background: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.input-field:focus, select:focus {
+    border-color: #a5dc86;
+}
+
+/* Switch Field Styles */
+.switch-field {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.switch-field input {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.switch-field label {
+    background-color: #e4e4e4;
+    color: #555;
+    font-size: 14px;
+    padding: 10px 10px;
+    margin-right: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.switch-field label:hover {
+    background-color: #dcdcdc;
+}
+
+.switch-field input:checked + label {
+    background-color: #a5dc86;
+    color: white;
+}
+
+.switch-field label:first-of-type {
+    border-radius: 5px 0 0 5px;
+}
+
+.switch-field label:last-of-type {
+    border-radius: 0 5px 5px 0;
+}
+
+/* Submit Button Styles */
+.submit-btn {
+    background: linear-gradient(45deg, #8bc34a, #a5dc86);
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:hover {
+    background: linear-gradient(45deg, #6faa35, #8bc34a);
+    transform: scale(1.05);
+}
+
+/* Result Box */
+.result {
+    background: #dcd686;
+    width: 100%;
+    padding: 3px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+}

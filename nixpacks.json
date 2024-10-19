@@ -1,0 +1,13 @@
+{
+  "phases": {
+    "install": {
+      "cmd": "pip install -r server/requirements.txt"
+    },
+    "start": {
+      "cmd": "gunicorn server.server:app --bind 0.0.0.0:$PORT"
+    }
+  },
+  "environment": {
+    "PORT": "5000"
+  }
+}
